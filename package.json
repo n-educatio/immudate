@@ -1,0 +1,27 @@
+{
+  "name": "immudate",
+  "version": "0.0.1",
+  "description": "Immutable date operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mstrzelczyk-neducatio/immudate.git"
+  },
+  "keywords": [
+    "date",
+    "immutable"
+  ],
+  "author": "mstrzelczyk-neducatio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mstrzelczyk-neducatio/immudate/issues"
+  },
+  "homepage": "https://github.com/mstrzelczyk-neducatio/immudate#readme",
+  "dependencies": {
+    "lodash": "^4.0.1",
+    "tape": "^4.4.0"
+  }
+}
