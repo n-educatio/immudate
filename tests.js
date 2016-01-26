@@ -14,11 +14,18 @@ test('future date cration test', function (t) {
   t.ok(immudate.future() > new Date());
 });
 
-test('date addition test', function (t) {
+test('date addition test - hours', function (t) {
   var now = immudate.now();
   t.plan(1);
 
   t.equal(Number(now.plusHours(24)), Number(now.date.setHours(now.date.getHours() + 24)));
+});
+
+test('date addition test - miutes', function (t) {
+  var now = immudate.now();
+  t.plan(1);
+
+  t.equal(Number(now.plusMinutes(15)), Number(now.date.setMinutes(now.date.getMinutes() + 15)));
 });
 
 test('immutability test', function (t) {
@@ -26,6 +33,7 @@ test('immutability test', function (t) {
   var nowCopy = _.extend({}, now);
   t.plan(1);
   now.plusHours(3);
+  now.plusMinutes(10);
 
   t.equal(now.date, nowCopy.date);
 });

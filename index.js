@@ -14,6 +14,12 @@ Immudate.prototype.plusHours = function (hours) {
   return new Immudate(date.setHours(date.getHours() + hours));
 }
 
+Immudate.prototype.plusMinutes = function (minutes) {
+  var date = new Date(this.date.valueOf());
+
+  return new Immudate(date.setMinutes(date.getMinutes() + minutes));
+}
+
 module.exports.now = function () {
   return new Immudate(new Date());
 }
