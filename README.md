@@ -1,7 +1,21 @@
 # immudate
-Immutable date operations
+Immutable date operations.
+```
+npm install immudate
+```
 
-See tests.js for usage examples.
+## Usage
+See tests and source code for full API spec.
+Some examples:
+
+```javascript
+var d = require('immudate');
+
+var today = d.now();
+var tomorrow = currentTime.plusHours(24); //today is not changed
+var somewhereInThePast = d.past();
+var somewhereInTheFuture = d.future();
+```
 
 **Do not forget to get *date* property when using Immudate object as Date object:**
 ```
