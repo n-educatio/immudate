@@ -12,7 +12,7 @@ Some examples:
 var d = require('immudate');
 
 var today = d.now();
-var tomorrow = currentTime.plusHours(24); //today is not changed
+var tomorrow = today.plusHours(24); //today is not changed
 var somewhereInThePast = d.past();
 var somewhereInTheFuture = d.future();
 ```
