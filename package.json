@@ -1,6 +1,6 @@
 {
   "name": "immudate",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Immutable date operations",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mstrzelczyk-neducatio/immudate.git"
+    "url": "git+ssh://git@github.com:n-educatio/immudate.git"
   },
   "keywords": [
     "date",
@@ -17,9 +17,9 @@
   "author": "mstrzelczyk-neducatio",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mstrzelczyk-neducatio/immudate/issues"
+    "url": "https://github.com/n-educatio/immudate/issues"
   },
-  "homepage": "https://github.com/mstrzelczyk-neducatio/immudate#readme",
+  "homepage": "https://github.com/n-educatio/immudate#readme",
   "dependencies": {
     "lodash": "^4.0.1",
     "tape": "^4.4.0"
