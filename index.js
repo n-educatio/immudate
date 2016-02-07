@@ -32,6 +32,12 @@ Immudate.prototype.minusHours = function (hours) {
   return new Immudate(date.setHours(date.getHours() - hours));
 }
 
+module.exports = function () {
+  var date = arguments.length > 0 ? new Date(arguments[0]) : new Date();
+
+  return new Immudate(date);
+}
+
 module.exports.now = function () {
   return new Immudate(new Date());
 }

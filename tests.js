@@ -42,6 +42,21 @@ test('date substraction test - hours', function (t) {
   t.equal(Number(now.minusHours(11)), Number(now.date.setHours(now.date.getHours() - 11)));
 });
 
+test('custom date constructor test - date string as argument', function (t) {
+  t.plan(1)
+  t.equal(Number(immudate('February 05, 2016 03:24:00').date), Number(new Date('February 05, 2016 03:24:00')))
+});
+
+test('custom date constructor test - date object as argument', function (t) {
+  t.plan(1)
+  t.equal(Number(immudate(new Date('January 03, 2015 01:13:00')).date), Number(new Date('January 03, 2015 01:13:00')))
+});
+
+test('custom date constructor test - now as default value', function (t) {
+  t.plan(1)
+  t.ok(Number(immudate().date) <= Number(new Date()))
+});
+
 test('immutability test', function (t) {
   var now = immudate.now();
   var nowCopy = _.extend({}, now);
