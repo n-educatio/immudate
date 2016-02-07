@@ -5,7 +5,7 @@ function Immudate (date) {
 }
 
 Immudate.prototype.valueOf = function () {
-  return this.date;
+  return this.date.valueOf();
 }
 
 Immudate.prototype.plusHours = function (hours) {

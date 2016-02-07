@@ -44,17 +44,17 @@ test('date substraction test - hours', function (t) {
 
 test('custom date constructor test - date string as argument', function (t) {
   t.plan(1)
-  t.equal(Number(immudate('February 05, 2016 03:24:00').date), Number(new Date('February 05, 2016 03:24:00')))
+  t.equal(Number(immudate('February 05, 2016 03:24:00')), Number(new Date('February 05, 2016 03:24:00')))
 });
 
 test('custom date constructor test - date object as argument', function (t) {
   t.plan(1)
-  t.equal(Number(immudate(new Date('January 03, 2015 01:13:00')).date), Number(new Date('January 03, 2015 01:13:00')))
+  t.equal(Number(immudate(new Date('January 03, 2015 01:13:00'))), Number(new Date('January 03, 2015 01:13:00')))
 });
 
 test('custom date constructor test - now as default value', function (t) {
   t.plan(1)
-  t.ok(Number(immudate().date) <= Number(new Date()))
+  t.ok(Number(immudate()) <= Number(new Date()))
 });
 
 test('immutability test', function (t) {
@@ -66,4 +66,12 @@ test('immutability test', function (t) {
   now.minusMinutes(13);
 
   t.equal(now.date, nowCopy.date);
+});
+
+test('fluent interface test', function (t) {
+  var current = immudate('February 05, 2016 03:24:00')
+    .plusHours(3)
+    .minusMinutes(4);
+  t.plan(1)
+  t.equal(Number(current), Number(new Date('February 05, 2016 06:20:00')))
 });
